@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback</title>
+</head>
+<body>
+
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#results">Results</a> |
+        <a href="#form">Feedback Form</a> |
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <main>
+        <section id="results">
+            <h2>Feedback Summary</h2>
+
+            <table class="feeedback-table">
+                <caption>Weekly Course Feedback Ratings</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Week</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Introduction to HTML</td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tables and Forms</td>
+                        <td>4.0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Semantic HTML</td>
+                        <td>4.0</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td rowspan="2">Mini Project</td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>4.8</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2" scope="row">Average Rating</th>
+                        <td>4.36</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="form">
+            <h2>Give Your Feedback</h2>
+
+            <form action="submit_feedback.php" method="post">
+                <p>
+                    <label for="fullname">Name:</label>
+                    <input type="text" id="fullname"
+                           name="fullname" required>
+                </p>
+
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email"
+                           name="email" required>
+                </p>
+
+                <fieldset>
+                    <legend>Overall rating:</legend>
+
+                    <input type="radio" id="good"
+                           name="rating" value="good" required>
+                    <label for="good">Good</label>
+
+                    <input type="radio" id="poor"
+                           name="rating" value="poor">
+                    <label for="poor">Poor</label>
+
+                    <input type="radio" id="average"
+                           name="rating" value="average">
+                    <label for="average">Average</label>
+                </fieldset>
+
+                <p>
+                    <input type="checkbox" id="labs"
+                           name="labs" value="yes">
+                    <label for="labs">I attended all labs</label>
+                </p>
+
+                <fieldset>
+                    <legend>Topics I want more practice on:</legend>
+
+                    <input type="checkbox" id="html"
+                           name="topics" value="HTML">
+                    <label for="html">HTML</label>
+
+                    <input type="checkbox" id="tables"
+                           name="topics" value="Tables">
+                    <label for="tables">Tables</label>
+
+                    <input type="checkbox" id="forms"
+                           name="topics" value="Forms">
+                    <label for="forms">Forms</label>
+                </fieldset>
+
+                <p>
+                    <label for="group">Section/Group:</label>
+                    <select id="group" name="group">
+                        <option value="">Select a group</option>
+                        <option value="A">Group A</option>
+                        <option value="B">Group B</option>
+                        <option value="C">Group C</option>
+                    </select>
+                </p>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="comments">
+            <h2>Student Comments</h2>
+
+            <article>
+                <h3>Student 1</h3>
+                <p>
+                    The HTML lessons were helpful and easy
+                    to understand.
+                </p>
+            </article>
+
+            <article>
+                <h3>Student 2</h3>
+                <p>
+                    I would like more practical exercises
+                    on tables and forms.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+
+</body>
+</html>
